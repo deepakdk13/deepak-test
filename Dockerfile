@@ -1,12 +1,12 @@
 FROM centos:latest
-MAINTAINER deepak.dk131@gmail.com
+MAINTAINER deepak.dk13@gmail.com
 RUN yum install -y httpd \
 zip \
 unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page259/fluffster.zip /var/www/html
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page247/kindle.zip /var/www/html
 WORKDIR /var/www/html
-RUN unzip fluffster.zip
-RUN cp -rvf fluffster/* .
-RUN rm -rf fluffster fluffster.zip
+RUN unzip kindle.zip
+RUN cp -rvf markups-kindle/* .
+RUN rm -rf __MACOSX markups-kindle kindle.zip
 CMD ["/usr/sbin/httpd","-D", "FOREGROUND"]
 EXPOSE 80
